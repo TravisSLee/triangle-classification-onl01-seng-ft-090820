@@ -3,6 +3,6 @@ class Triangle
   attr_accessor :equilateral, :isosceles, :scalene
   
   def initialize(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)} 
+    attributes.each do 
   end
 end
