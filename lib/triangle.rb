@@ -3,6 +3,6 @@ class Triangle
   attr_accessor :length 
   
   def initialize(length, length, length)
-    attributes.each {|key, value| self.send(("#{key}="), value)} 
+    @length = length 
   end
 end
