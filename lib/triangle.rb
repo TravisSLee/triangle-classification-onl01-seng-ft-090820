@@ -8,7 +8,7 @@ class Triangle
     @length3 = length3
   end
   
-  def kind()
+  def kind(length1, length2, length3)
     if (@length1 <= 0) || (@length2 <= 0) || (@length3 <= 0)
       raise TriangleError
     elsif (@length1 + @length2 <= @side_3) || (@length1 + @length2 <= @side_2) || (@length2 + @length3 <= @length1)
