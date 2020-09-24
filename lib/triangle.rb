@@ -7,16 +7,16 @@ class Triangle
   end
   
   def kind()
-    if (@side_1 <= 0) || (@side_2 <= 0) || (@side_3 <= 0)
+    if (@length1 <= 0) || (@length2 <= 0) || (@length3 <= 0)
       raise TriangleError
-    elsif (@side_1+@side_2 <= @side_3) || (@side_1+@side_3 <= @side_2) || (@side_2+@side_3 <= @side_1)
+    elsif (@length1 + @length2 <= @side_3) || (@length1 + @length2 <= @side_2) || (@length2 + @length3 <= @length1)
       raise TriangleError
     else
-      if (@side_1 == @side_2) && (@side_2 == @side_3)
+      if (@length1 == @length2) && (@length2 == @length3)
         :equilateral
-      elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+      elsif (@length1 == @length2) || (@length2 == @length3) || (@length1 == @length3)
         :isosceles
-      elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+      elsif (@length1 != @length2) && (@length2 != @sidlength3e_3) && (@length1 != @length3)
         :scalene
       end
     end
